@@ -34,6 +34,7 @@ import kalorisLogo from "@/assets/clients/kaloris-smart-healing.jpeg";
 import mahindraNewLogo from "@/assets/clients/mahindra-new.jpg";
 import sujanContitech from "@/assets/clients/sujan-contitech.svg";
 import synergyInfratechLogo from "@/assets/clients/synergy-infratech.jpeg";
+import atombergLogo from "@/assets/clients/atomberg.png";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
 import heroImg from "@/assets/hero-construction.jpg";
@@ -270,6 +271,7 @@ const Index = () => {
               { logo: cotswoldLogo, name: "Cotswold" },
               { logo: hufLogo, name: "Huf" },
               { logo: coldstarLogo, name: "ColdStar" },
+              { logo: atombergLogo, name: "Atomberg" },
             ].map((client, i) => (
               <ScrollReveal key={i} delay={i * 60}>
                 <div className="bg-white border border-border rounded-lg p-6 flex flex-col items-center justify-center hover:shadow-lg hover:-translate-y-1 transition-all h-40">
