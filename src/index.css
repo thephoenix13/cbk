@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 35 41% 93.5%;
+    --foreground: 27 27% 13%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 27 27% 13%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 27 27% 13%;
+
+    --primary: 0 11% 21%;
+    --primary-foreground: 35 41% 93.5%;
+
+    --secondary: 32 26% 38%;
+    --secondary-foreground: 35 41% 93.5%;
+
+    --muted: 35 20% 88%;
+    --muted-foreground: 27 15% 40%;
+
+    --accent: 31 43% 60%;
+    --accent-foreground: 30 27% 9%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 35 20% 82%;
+    --input: 35 20% 82%;
+    --ring: 31 43% 60%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 30 27% 9%;
+    --sidebar-foreground: 35 41% 93.5%;
+    --sidebar-primary: 31 43% 60%;
+    --sidebar-primary-foreground: 30 27% 9%;
+    --sidebar-accent: 32 26% 38%;
+    --sidebar-accent-foreground: 35 41% 93.5%;
+    --sidebar-border: 32 20% 20%;
+    --sidebar-ring: 31 43% 60%;
+  }
+
+  .dark {
+    --background: 30 27% 9%;
+    --foreground: 35 41% 93.5%;
+
+    --card: 30 20% 12%;
+    --card-foreground: 35 41% 93.5%;
+
+    --popover: 30 20% 12%;
+    --popover-foreground: 35 41% 93.5%;
+
+    --primary: 31 43% 60%;
+    --primary-foreground: 30 27% 9%;
+
+    --secondary: 32 26% 38%;
+    --secondary-foreground: 35 41% 93.5%;
+
+    --muted: 30 15% 18%;
+    --muted-foreground: 35 15% 60%;
+
+    --accent: 31 43% 60%;
+    --accent-foreground: 30 27% 9%;
+
+    --destructive: 0 62% 31%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 30 15% 20%;
+    --input: 30 15% 20%;
+    --ring: 31 43% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-body {
+    font-family: 'Source Sans 3', sans-serif;
+  }
+
+  .font-label {
+    font-family: 'Barlow Condensed', sans-serif;
+  }
+}
