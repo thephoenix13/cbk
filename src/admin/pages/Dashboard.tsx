@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Briefcase, FileText, Images, Settings, Users } from "lucide-react";
+import { Briefcase, FileText, Images, LifeBuoy, Settings, Users } from "lucide-react";
 import { PAGES } from "@/content/sections";
 
 const cards = [
@@ -7,6 +7,7 @@ const cards = [
   { to: "/admin/projects", icon: Briefcase, title: "Projects", text: "Add, edit, reorder or hide the projects on the Our Work page." },
   { to: "/admin/clients", icon: Users, title: "Clients", text: "Manage the client logos shown on the home page." },
   { to: "/admin/media", icon: Images, title: "Media library", text: "Upload and manage pictures used on the website." },
+  { to: "/admin/guide", icon: LifeBuoy, title: "Help & guide", text: "Step-by-step instructions and answers if something goes wrong." },
 ];
 
 const Dashboard = () => (

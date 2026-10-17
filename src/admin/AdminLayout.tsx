@@ -1,5 +1,5 @@
 import { NavLink, Navigate, Outlet, useLocation } from "react-router-dom";
-import { Building2, ExternalLink, FileText, Images, LayoutDashboard, LogOut, Settings, Users, Briefcase } from "lucide-react";
+import { Building2, ExternalLink, FileText, Images, LayoutDashboard, LogOut, Settings, Users, Briefcase, LifeBuoy } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PAGES } from "@/content/sections";
 import { useAuth } from "./AuthProvider";
@@ -46,6 +46,7 @@ const AdminLayout = () => {
           <NavLink to="/admin/media" className={linkClass}><Images size={16} /> Media library</NavLink>
         </nav>
         <div className="mt-6 space-y-1 border-t border-primary-foreground/10 pt-4">
+          <NavLink to="/admin/guide" className={linkClass}><LifeBuoy size={16} /> Help &amp; guide</NavLink>
           <a href="/" target="_blank" rel="noreferrer" className="flex items-center gap-2 px-3 py-2 text-sm text-primary-foreground/80 hover:text-accent">
             <ExternalLink size={16} /> View website
           </a>

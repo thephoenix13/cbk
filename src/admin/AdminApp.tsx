@@ -8,6 +8,7 @@ import PageEditor from "./pages/PageEditor";
 import ProjectsAdmin from "./pages/ProjectsAdmin";
 import ClientsAdmin from "./pages/ClientsAdmin";
 import MediaAdmin from "./pages/MediaAdmin";
+import GuideAdmin from "./pages/GuideAdmin";
 
 // Loaded lazily so public visitors never download the editor code.
 const AdminApp = () => (
@@ -21,6 +22,7 @@ const AdminApp = () => (
         <Route path="projects" element={<ProjectsAdmin />} />
         <Route path="clients" element={<ClientsAdmin />} />
         <Route path="media" element={<MediaAdmin />} />
+        <Route path="guide" element={<GuideAdmin />} />
       </Route>
     </Routes>
   </AuthProvider>
