@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import cbkLogo from "@/assets/cbk-logo.png";
+import { useSettings } from "@/content/ContentProvider";
 
 const navLinks = [
   { label: "Home", to: "/" },
@@ -16,12 +17,13 @@ const navLinks = [
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
+  const { logo } = useSettings();
 
   return (
     <nav className="sticky top-0 z-50 bg-primary/95 backdrop-blur-sm border-b border-secondary/20">
       <div className="container mx-auto px-4 flex items-center justify-between h-20 md:h-24">
         <Link to="/" className="flex items-center">
-          <img src={cbkLogo} alt="CBK Infra Projects" className="h-14 md:h-16 w-auto bg-white rounded-md px-2 py-1" />
+          <img src={logo || cbkLogo} alt="CBK Infra Projects" className="h-14 md:h-16 w-auto bg-white rounded-md px-2 py-1" />
         </Link>
 
         {/* Desktop Nav */}
