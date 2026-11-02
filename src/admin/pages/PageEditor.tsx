@@ -1,4 +1,4 @@
-import { useParams, Navigate } from "react-router-dom";
+import { useParams, Navigate, Link } from "react-router-dom";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { mergeDefaults } from "@/content/ContentProvider";
@@ -29,6 +29,17 @@ const PageEditor = () => {
     <div className="max-w-3xl">
       <h1 className="mb-1 font-heading text-2xl font-bold">{meta.label} page</h1>
       <p className="mb-6 text-sm text-muted-foreground">Open a block below, change it and press Save. Changes appear on the website straight away.</p>
+      {page === "work" && (
+        <div className="mb-6 flex flex-wrap items-center justify-between gap-3 rounded-lg border-l-4 border-accent bg-accent/10 p-4">
+          <div>
+            <p className="font-semibold">Want to add or edit the projects themselves?</p>
+            <p className="text-sm text-muted-foreground">The project cards on this page are managed separately, in Projects.</p>
+          </div>
+          <Link to="/admin/projects" className="rounded-md bg-accent px-4 py-2 text-sm font-medium text-accent-foreground hover:bg-accent/90">
+            Manage projects
+          </Link>
+        </div>
+      )}
       {isLoading && <p className="text-sm text-muted-foreground">Loading…</p>}
       {error && <p className="text-sm text-destructive">Could not load content. Please refresh.</p>}
       {stored && (

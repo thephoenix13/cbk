@@ -60,6 +60,7 @@ const topics: { id: string; title: string; body: ReactNode }[] = [
           <li><strong>Icon</strong> fields let you pick a small symbol from a list.</li>
         </ul>
         <Tip>Keep titles short. Long titles can wrap onto several lines and make cards uneven.</Tip>
+        <Tip>The project cards on the <strong>Our Work</strong> page are not in this list. Add and edit them in <Link to="/admin/projects" className="font-medium text-accent underline">Projects</Link> (topic 7). The client logos on the Home page are in <Link to="/admin/clients" className="font-medium text-accent underline">Clients</Link>.</Tip>
       </Body>
     ),
   },
